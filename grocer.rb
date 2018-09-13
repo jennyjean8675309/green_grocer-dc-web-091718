@@ -32,10 +32,10 @@ def consolidate_cart(cart)
     consolidated_cart
 end
 
-def add_coupon_key(cart, coupons)
-  cart.each do |item_name, pricing_info|
+def add_coupon_key(cart, *coupons)
+  cart.collect do |item_name, pricing_info|
     coupons.each do |inc, value|
-      if item_name == inc[:item] && inc[:num] <= pricing_info[:count]
+       item_name == inc[:item] && inc[:num] <= pricing_info[:count]
         cart["#{item_name} W/COUPON"] = pricing_info
       end
     end
