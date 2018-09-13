@@ -57,7 +57,7 @@ def add_values_to_coupon(cart, coupons)
     coupons.each do |inc, value|
       if item = "#{inc[item]} W/COUPON"
         binding.pry
-        item[:count] = cart[item][:count] / inc[:num]
+        
       end
     end
   end
