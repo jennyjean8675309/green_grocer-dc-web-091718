@@ -58,8 +58,6 @@ end
 
 def apply_coupons(cart, coupons)
   add_coupon_key(cart, coupons)
-
-  
 end
 
 def apply_clearance(cart)
