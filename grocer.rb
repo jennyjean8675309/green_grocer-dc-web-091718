@@ -41,9 +41,8 @@ def add_coupon_key(cart, coupons)
         cart_with_coupons["#{item_name} W/COUPON"] = pricing_info
       end
     end
+    cart_with_coupons
   end
-  cart_with_coupons
-end
 
 def add_values_to_coupon(cart, coupons)
   cart_with_coupons = add_coupon_key(cart, coupons)
