@@ -32,7 +32,7 @@ end
 
 def add_coupon_key(cart, coupons)
   cart_with_coupons = {}
-  cart.collect do |item_name, pricing_info|
+  cart.each do |item_name, pricing_info|
     cart_with_coupons[item_name] = pricing_info
     cart_with_coupons.each do |item, pricing|
       coupons.each do |inc, value|
