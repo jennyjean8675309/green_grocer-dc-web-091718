@@ -60,6 +60,7 @@ def add_values_to_coupon(cart, coupons)
         pricing[:price] = inc[:cost] * pricing[:count]
       end
       if item == inc[:item]
+        pricing[:count] = 
       binding.pry
     end
   end
