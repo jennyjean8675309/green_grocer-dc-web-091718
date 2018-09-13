@@ -40,12 +40,11 @@ def add_coupon_key(cart, coupons)
       end
     end
   end
+  cart
 end
 
 def apply_coupons(cart, coupons)
-  
-  end
-
+  add_coupon_key(cart, coupons)
 end
 
 def apply_clearance(cart)
