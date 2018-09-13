@@ -13,7 +13,6 @@ def consolidate_cart(cart)
     end
   end
   get_count
-  
   consolidated_cart = {}
   cart.each do |item|
     item.each do |item_name, price_info|
@@ -23,7 +22,6 @@ def consolidate_cart(cart)
     end
   end
   consolidated_cart
-  
   consolidated_cart.each do |item, price_info|
     if get_count.include?(item)
       consolidated_cart[item][:count] = get_count[item]
