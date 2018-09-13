@@ -45,7 +45,7 @@ end
 
 def apply_coupons(cart, coupons)
   add_coupon_key(cart, coupons)
-  
+    binding.pry
   
 end
 
