@@ -42,7 +42,6 @@ def apply_coupons(cart, coupons)
   end
   discount_price
   
-  
         cart["#{item_name} W/COUPON"] = pricing_info
         cart["#{item_name} W/COUPON"][:price] = discount_price
         cart["#{item_name} W/COUPON"][:count] = (pricing_info[:count] / inc[:num])
