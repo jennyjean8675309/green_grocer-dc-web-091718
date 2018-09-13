@@ -35,7 +35,7 @@ end
 def add_coupon_key(cart, *coupons)
   cart.collect do |item_name, pricing_info|
     coupons.each do |inc, value|
-       item_name == inc[:item] && inc[:num] <= pricing_info[:count]
+      if item_name == inc[:item] && inc[:num] <= pricing_info[:count]
         cart["#{item_name} W/COUPON"] = pricing_info
       end
     end
