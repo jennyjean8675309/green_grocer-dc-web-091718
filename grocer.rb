@@ -53,12 +53,18 @@ end
 
 def add_values_to_coupon(cart, coupons)
   cart_with_coupons = add_coupon_key(cart, coupons)
-  binding.pry
-  
+  cart_with_coupons.each do |item, pricing|
+    coupons.each do |inc, value|
+      if item = "#{inc[item]} W/COUPON"
+        item[:count] = cart[item][:count] / inc[:num]
+      end
+    end
+  end
+  cart_with_coupons
 end
 
 def apply_coupons(cart, coupons)
-  add_coupon_key(cart, coupons)
+  add_values_to_coupon(cart, coupons)
 end
 
 def apply_clearance(cart)
