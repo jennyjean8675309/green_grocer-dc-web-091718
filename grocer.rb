@@ -34,15 +34,17 @@ def add_coupon_key(cart, coupons)
   cart_with_coupons = {}
   cart.each do |item_name, pricing_info|
     cart_with_coupons[item_name] = pricing_info
-    cart_with_coupons.each do |item, pricing|
-      coupons.each do |inc, value|
-        if item == inc[:item] && (inc[:num] <= pricing[:count])
+  end
+  cart_with_coupons
+  binding.pry
+  
+  cart_with_coupons.each do |item, pricing|
+    coupons.each do |inc, value|
+      if item == inc[:item] && (inc[:num] <= pricing[:count])
         cart_with_coupons["#{item} W/COUPON"] = pricing
-        end
       end
     end
   end
-  cart_with_coupons
 end
 
 def add_values_to_coupon(cart, coupons)
