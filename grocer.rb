@@ -42,7 +42,7 @@ def add_coupon_key(cart, coupons)
       end
     end
     cart_with_coupons
-  end
+end
 
 def add_values_to_coupon(cart, coupons)
   cart_with_coupons = add_coupon_key(cart, coupons)
