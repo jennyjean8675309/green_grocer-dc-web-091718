@@ -40,12 +40,12 @@ def add_coupon_key(cart, coupons)
       end
     end
   end
-  binding.pry
   cart
 end
 
 def apply_coupons(cart, coupons)
   add_coupon_key(cart, coupons)
+  
   
 end
 
