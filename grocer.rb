@@ -35,7 +35,6 @@ def add_coupon_key(cart, coupons)
   cart.each do |item_name, pricing_info|
     coupons.each do |inc, value|
       if item_name == inc[:item] && (inc[:num]) <= (pricing_info[:count])
-        binding.pry
         cart_with_coupons["#{item_name} W/COUPON"] = pricing_info
         if cart[item_name][:count] != inc[:num] && cart[item_name][:count] % inc[:num] > 0 
           cart_with_coupons[item_name] = pricing_info
