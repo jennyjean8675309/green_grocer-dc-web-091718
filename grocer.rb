@@ -58,10 +58,8 @@ def add_values_to_coupon(cart, coupons)
       if item == "#{inc[:item]} W/COUPON"
         pricing[:count] = cart[inc[:item]][:count] / inc[:num]
       end
-     
-    end
+     end
   end
-
   cart_with_coupons
 end
 
