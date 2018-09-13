@@ -56,9 +56,10 @@ def add_values_to_coupon(cart, coupons)
   cart_with_coupons.each do |item, pricing|
     coupons.each do |inc, value|
       if item == "#{inc[item]} W/COUPON"
-      binding.pry
+     
         
       end
+      
     end
   end
   cart_with_coupons
