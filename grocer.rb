@@ -41,7 +41,7 @@ def apply_coupons(cart, coupons)
         cart["#{item_name} W/COUPON"][:price] = discount_price
         cart["#{item_name} W/COUPON"][:count] = (pricing_info[:count] / inc[:num])
           if (pricing_info[:count] % inc[:num] > 0)
-          
+          binding.pry
           end
             
         
