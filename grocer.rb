@@ -43,25 +43,7 @@ def add_coupon_key(cart, coupons)
 end
 
 def apply_coupons(cart, coupons)
-  cart.each do |item_name, pricing_info|
-    
-    coupons.each do |inc, value|
-      if item_name == inc[:item] && inc[:num] <= pricing_info[:count]
-        discount_price = ((pricing_info[:count] / inc[:num]) * inc[:cost])
-      end
-    end
-  end
-  discount_price
   
-        cart["#{item_name} W/COUPON"] = pricing_info
-        cart["#{item_name} W/COUPON"][:price] = discount_price
-        cart["#{item_name} W/COUPON"][:count] = (pricing_info[:count] / inc[:num])
-          if (pricing_info[:count] % inc[:num] > 0)
-          binding.pry
-          end
-        end
-            
-        end
   end
 
 end
