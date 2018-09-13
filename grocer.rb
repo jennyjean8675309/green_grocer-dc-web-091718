@@ -41,7 +41,6 @@ def add_coupon_key(cart, coupons)
         if cart[item_name][:count] != inc[:num] && cart[item_name][:count] % inc[:num] > 0 
           cart_with_coupons[item_name] = pricing_info
         end
-  
       elsif item_name == inc[:item] && inc[:num] > pricing_info[:count]
         cart_with_coupons[item_name] = pricing_info
       elsif item_name != inc[:item]
@@ -49,13 +48,12 @@ def add_coupon_key(cart, coupons)
       end
     end
   end
-
   cart_with_coupons
 end
 
 def apply_coupons(cart, coupons)
   add_coupon_key(cart, coupons)
- 
+ binding.pry
   
 end
 
