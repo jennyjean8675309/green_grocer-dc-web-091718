@@ -52,7 +52,7 @@ def add_coupon_key(cart, coupons)
 end
 
 def add_values_to_coupon(cart, coupons)
-  cart_with_coupons(cart, coupons)
+  add_coupon_key(cart, coupons)
   binding.pry
 end
 
