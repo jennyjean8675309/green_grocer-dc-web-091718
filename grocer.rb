@@ -41,8 +41,9 @@ def add_coupon_key(cart, coupons)
 
         if item == inc[:item] && (inc[:num] <= pricing[:count])
         cart_with_coupons["#{item} W/COUPON"] = pricing
-                binding.pry
+               
         end
+        binding.pry
       end
     end
     cart_with_coupons
