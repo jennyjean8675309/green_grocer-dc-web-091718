@@ -34,8 +34,9 @@ end
 
 def apply_coupons(cart, coupons)
   cart.each do |item_name, pricing_info|
+    
     coupons.each do |inc, value|
-      if item_name == inc[:item] && inc[:num] <= pricing_info[:price]
+      if item_name == inc[:item] && inc[:num] <= pricing_info[:count]
         discount_price = ((pricing_info[:count] / inc[:num]) * inc[:cost])
       end
     end
