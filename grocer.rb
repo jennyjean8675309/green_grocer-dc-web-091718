@@ -59,6 +59,7 @@ def add_values_to_coupon(cart, coupons)
 end
 
 def apply_coupons(cart, coupons)
+  
   add_values_to_coupon(cart, coupons)
 end
 
