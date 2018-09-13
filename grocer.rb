@@ -32,7 +32,7 @@ def consolidate_cart(cart)
     consolidated_cart
 end
 
-def add_coupon_key(cart, *coupons)
+def add_coupon_key(cart, coupons)
   cart_with_coupons = {}
   cart.each do |item_name, pricing_info|
     coupons.each do |inc, value|
