@@ -43,11 +43,9 @@ def apply_coupons(cart, coupons)
           if (pricing_info[:count] % inc[:num] > 0)
           binding.pry
           end
+        end
             
-        
-        
-        
-    end
+        end
   end
 
 end
