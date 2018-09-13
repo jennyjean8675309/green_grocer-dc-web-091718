@@ -30,18 +30,6 @@ def consolidate_cart(cart)
     consolidated_cart
 end
 
-def add_coupon_key(cart, coupons)
-  cart.each do |item, pricing|
-    coupons.each do |inc, value|
-      if item == inc[:item] && (inc[:num] <= pricing[:count])
-        cart["#{item} W/COUPON"] = pricing
-      end
-    end
-  end
-  binding.pry
-  cart
-end
-
 def add_values_to_coupon(cart, coupons)
   cart_with_coupons = add_coupon_key(cart, coupons)
   cart_with_coupons.each do |item, pricing|
@@ -59,8 +47,15 @@ def add_values_to_coupon(cart, coupons)
 end
 
 def apply_coupons(cart, coupons)
-  
-  add_values_to_coupon(cart, coupons)
+    cart.each do |item, pricing|
+    coupons.each do |inc, value|
+      if item == inc[:item] && (inc[:num] <= pricing[:count])
+        cart["#{item} W/COUPON"] = pricing
+      end
+    end
+  end
+  binding.pry
+  cart
 end
 
 def apply_clearance(cart)
